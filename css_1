@@ -1,0 +1,103 @@
+nav a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: white; /* Ubah warna sesuai kebutuhan */
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: yellow; /* Ganti dengan warna yang diinginkan */
+    transform: scale(1.1); /* Membesarkan sedikit */
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Ketebalan garis */
+    background: yellow; /* Warna garis */
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+div.galery {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    grid-auto-flow: flex;
+    grid-auto-columns: 250px;
+    justify-content: stretch; align-items: center;
+    border-radius: 8px;
+    box-shadow: 12px 45px 45px rgba(0, 0, 0, 0, 6);
+    
+}
+
+
+
+
+.thumbnail {
+    width: 200px; /* Ukuran thumbnail */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+.full-screen {
+    display: none; /* Tersembunyi secara default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Latar belakang gelap */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Pastikan di atas elemen lain */
+}
+
+.full-screen img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.image-container img.blur {
+    filter: blur(5px);
+    transition: filter 0.3s ease;
+}
+
+.skill-logo {
+    flex: 0 0 auto; /* Membuat logo tidak menyusut dan tetap dalam ukuran aslinya */
+    transition: transform 0.3s;
+}
+
+.skill-logo:hover {
+    transform: scale(1.1); /* Efek zoom saat hover */
+}
+
+.overflow-x-auto {
+    overflow-x: auto; /* Mengaktifkan scroll horizontal */
+    scrollbar-width: thin; /* Untuk Firefox */
+}
+
+.overflow-x-auto::-webkit-scrollbar {
+    height: 8px; /* Tinggi scrollbar */
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+    background: #4a4a4a; /* Warna scrollbar */
+    border-radius: 10px; /* Membuat sudut scrollbar melengkung */
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+    background: #2d2d2d; /* Warna track scrollbar */
+}
